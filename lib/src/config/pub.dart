@@ -3,3 +3,4 @@ export 'dart:async';
 export 'dart:convert';
 export 'package:flutter/services.dart';
 export 'package:flutter/material.dart';
+export 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
