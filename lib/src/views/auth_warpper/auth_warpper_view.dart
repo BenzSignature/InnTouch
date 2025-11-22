@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:inn_touch/src/views/home/home_view.dart';
-import 'package:inn_touch/src/views/login/login_view.dart';
+import 'package:inn_touch/src/views/export_views.dart';
 
 class AuthWrapper extends StatelessWidget {
   const AuthWrapper({super.key});
@@ -17,7 +16,7 @@ class AuthWrapper extends StatelessWidget {
           );
         }
         if (snapshot.hasData) {
-          return HomeView();
+          return BottomNavBar();
         }
         return LoginView();
       },

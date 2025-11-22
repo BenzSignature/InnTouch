@@ -3,3 +3,5 @@ export 'register/export_register_controller.dart';
 export 'login/export_login_controller.dart';
 export 'splash/export_splash_controller.dart';
 export 'auth/export_auth_controller.dart';
+export 'setting/export_setting_controller.dart';
+export 'bottom_nav_bar/export_bottom_nav_bar_controller.dart';
