@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820084161922",
+    "project_id": "inntouch-41fb0",
+    "storage_bucket": "inntouch-41fb0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820084161922:android:4a9024cf50f5983542a39b",
+        "android_client_info": {
+          "package_name": "com.example.inn_touch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLYgwKO5czyoSccUdwu-HgxdwOS01jdh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

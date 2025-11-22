@@ -1,24 +1,24 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:inn_touch/src/bindings/export_bindings.dart';
+import 'package:inn_touch/src/config/export_config.dart';
+import 'package:inn_touch/src/controllers/export_contollres.dart';
 import 'package:inn_touch/src/routes/export_routes.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  Get.put(AuthController(), permanent: true);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Personal Task Manager',
-      initialBinding: HomeBinding(),
-      initialRoute: PathRoutes.home,
-      // getPages: PagesRoutes.routes,
+      title: 'Inn Touch',
+      initialRoute: PathRoutes.splash,
+      getPages: PagesRoutes.routes,
     );
   }
 }

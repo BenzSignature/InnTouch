@@ -51,6 +51,7 @@ dependencies:
   intl: ^0.20.2
   nepali_date_picker: ^7.0.1
   fluttertoast: ^8.2.12
+  flutter_keyboard_visibility: ^6.0.0
   # flutter_stripe: ^12.0.2
   # easy_stepper: ^0.8.5+1
 
@@ -77,8 +78,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/
-    - icons/
+    - assets/images/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
