@@ -25,5 +25,15 @@ class PagesRoutes {
       page: () => RegisterView(),
       binding: RegisterBinding(),
     ),
+    GetPage(
+      name: PathRoutes.setting,
+      page: () => SettingView(),
+      binding: SettingBinding(),
+    ),
+    GetPage(
+      name: PathRoutes.bottomNavBar,
+      page: () => BottomNavBar(),
+      binding: BottomNavBarBinding(),
+    ),
   ];
 }

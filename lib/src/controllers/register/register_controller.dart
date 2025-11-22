@@ -23,7 +23,7 @@ class RegisterController extends GetxController {
     String password = passwordController.text.trim();
     bool isRegisterSuccess = await _authService.signUp(name, email, password);
     if (isRegisterSuccess) {
-      Get.offAllNamed(PathRoutes.home);
+      Get.offAllNamed(PathRoutes.bottomNavBar);
     } else {
       Get.snackbar(
         "Login Failed",

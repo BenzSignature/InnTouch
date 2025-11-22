@@ -16,7 +16,7 @@ class SplashController extends GetxController {
       if (FirebaseAuth.instance.currentUser != null) {
         // NOTE: if have go to Home pass Route
         log('User found, navigating to Home');
-        Get.offAllNamed(PathRoutes.home);
+        Get.offAllNamed(PathRoutes.bottomNavBar);
       } else {
         // NOTE: in not go to Login pass Route
         log('No user, navigating to Login');

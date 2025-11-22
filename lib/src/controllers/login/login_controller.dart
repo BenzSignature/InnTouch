@@ -31,7 +31,7 @@ class LoginController extends GetxController {
     bool isSuccess = await _authService.login(email, password);
     isLoading.value = false;
     if (isSuccess) {
-      Get.offAllNamed(PathRoutes.home);
+      Get.offAllNamed(PathRoutes.bottomNavBar);
     } else {
       Get.snackbar(
         'Login Failed',
@@ -45,7 +45,7 @@ class LoginController extends GetxController {
 
   void signInAsGuest() async {
     await _authService.signInAsGuest();
-    Get.offAndToNamed(PathRoutes.home);
+    Get.offAndToNamed(PathRoutes.bottomNavBar);
   }
 
   void goToRegister() {
