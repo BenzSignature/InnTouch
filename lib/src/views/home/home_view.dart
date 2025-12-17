@@ -26,11 +26,11 @@ class HomeView extends GetView<HomeController> {
             return const CircularProgressIndicator();
           } else if (controller.user.value != null) {
             return Text(
-              'Welcome, ${controller.user.value!.name}!',
+              'Hello, ${controller.user.value!.name}!'.tr,
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             );
           } else {
-            return const Text('Could not load user data.');
+            return Text('Hello'.tr);
           }
         }),
       ),
