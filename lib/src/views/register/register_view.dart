@@ -41,6 +41,16 @@ class RegisterView extends GetView<RegisterController> {
               ),
               const SizedBox(height: 15),
               TextField(
+                controller: controller.phoneController,
+                decoration: const InputDecoration(
+                  hint: CustomText('Phone'),
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.phone),
+                ),
+                keyboardType: TextInputType.phone,
+              ),
+              const SizedBox(height: 15),
+              TextField(
                 controller: controller.passwordController,
                 decoration: const InputDecoration(
                   hint: CustomText('Password'),

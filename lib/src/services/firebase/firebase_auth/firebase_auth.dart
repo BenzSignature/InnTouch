@@ -28,7 +28,7 @@ class AuthService {
     }
   }
 
-  Future<bool> signUp(String name, String email, String password) async {
+  Future<bool> signUp(String name, String email, String password, String phone) async {
     try {
       // NOTE: create user in Authentication
       UserCredential userCredential = await _auth
@@ -39,6 +39,7 @@ class AuthService {
         uid: userCredential.user!.uid,
         name: name,
         email: email,
+        phone: phone,
       );
 
       return true;
