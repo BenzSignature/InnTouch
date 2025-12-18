@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/export_contollres.dart';
+import 'package:inn_touch/src/core/widgets/export_widget.dart';
 
-class SettingView extends GetView<SettingController> {
-  const SettingView({super.key});
+class ServiceView extends GetView<ServiceController> {
+  const ServiceView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +13,9 @@ class SettingView extends GetView<SettingController> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              IconButton(
-                icon: const Icon(Icons.logout),
-                tooltip: 'Sign Out',
-                onPressed: () {
-                  controller.signOut();
-                },
-              ),
+              Center(
+                child: CustomText('Service View'),
+              )
             ],
           ),
         ),

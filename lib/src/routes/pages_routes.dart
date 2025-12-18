@@ -35,5 +35,15 @@ class PagesRoutes {
       page: () => BottomNavBar(),
       binding: BottomNavBarBinding(),
     ),
+    GetPage(
+      name: PathRoutes.service,
+      page: () => ServiceView(),
+      binding: ServiceBinding(),
+    ),
+    GetPage(
+      name: PathRoutes.myStays,
+      page: () => MyStaysView(),
+      binding: MyStaysBinding(),
+    ),
   ];
 }

@@ -45,14 +45,14 @@ class LoginView extends GetView<LoginController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("ยังไม่มีบัญชี?"),
+                  const CustomText("ยังไม่มีบัญชี?"),
                   TextButton(
                     onPressed: () {
                       controller.goToRegister();
                     },
-                    child: const Text(
+                    child: const CustomText(
                       'สมัครสมาชิกที่นี่',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
@@ -61,7 +61,7 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () {
                   controller.signInAsGuest();
                 },
-                child: const Text('Continue as Guest'),
+                child: const CustomText('Continue as Guest'),
               ),
             ],
           ),
