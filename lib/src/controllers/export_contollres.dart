@@ -5,3 +5,5 @@ export 'splash/export_splash_controller.dart';
 export 'auth/export_auth_controller.dart';
 export 'setting/export_setting_controller.dart';
 export 'bottom_nav_bar/export_bottom_nav_bar_controller.dart';
+export 'my_stays/export_my_stays_controller.dart';
+export 'service/export_service_controller.dart';

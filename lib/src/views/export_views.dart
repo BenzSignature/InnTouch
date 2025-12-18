@@ -5,3 +5,5 @@ export 'register/export_register_view.dart';
 export 'auth_warpper/export_auth_wrapper_view.dart';
 export 'bottom_nav_bar/export_bottom_nav_bar_view.dart';
 export 'setting/export_setting_view.dart';
+export 'service/export_service_view.dart';
+export 'my_stays/export_my_stays_view.dart';

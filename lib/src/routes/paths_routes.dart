@@ -5,4 +5,6 @@ abstract class PathRoutes {
   static const login = '/login';
   static const setting = '/setting';
   static const bottomNavBar = '/bottom_nav_bar';
+  static const myStays = '/my_stays';
+  static const service = '/service';
 }

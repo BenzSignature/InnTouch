@@ -2,8 +2,8 @@ import 'package:get/get.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/export_contollres.dart';
 
-class SettingView extends GetView<SettingController> {
-  const SettingView({super.key});
+class MyStaysView extends GetView<MyStaysController> {
+  const MyStaysView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +11,7 @@ class SettingView extends GetView<SettingController> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.logout),
-                tooltip: 'Sign Out',
-                onPressed: () {
-                  controller.signOut();
-                },
-              ),
-            ],
+            children: [],
           ),
         ),
       ),

@@ -5,3 +5,6 @@ export 'package:flutter/services.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 export 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
+export 'app_colors.dart';
+export 'app_fonts.dart';
+export '../extension/hex_color.dart';
