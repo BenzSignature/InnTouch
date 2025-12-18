@@ -24,6 +24,24 @@ class BottomNavBarController extends GetxController {
         ),
       ),
       PersistentBottomNavBarItem(
+        icon: const Icon(CupertinoIcons.hourglass),
+        title: ("My Stay"),
+        activeColorPrimary: CupertinoColors.activeBlue,
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        routeAndNavigatorSettings: RouteAndNavigatorSettings(
+          initialRoute: PathRoutes.myStays,
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: const Icon(CupertinoIcons.smiley),
+        title: ("Service"),
+        activeColorPrimary: CupertinoColors.activeBlue,
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        routeAndNavigatorSettings: RouteAndNavigatorSettings(
+          initialRoute: PathRoutes.service,
+        ),
+      ),
+      PersistentBottomNavBarItem(
         icon: const Icon(CupertinoIcons.settings),
         title: ("Settings"),
         activeColorPrimary: CupertinoColors.activeBlue,

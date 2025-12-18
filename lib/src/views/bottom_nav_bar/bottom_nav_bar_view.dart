@@ -9,7 +9,7 @@ class BottomNavBar extends GetView<BottomNavBarController> {
   @override
   Widget build(BuildContext context) {
     List<Widget> buildScreens() {
-      return [HomeView(), SettingView()];
+      return [HomeView(), MyStaysView(), ServiceView(), SettingView()];
     }
 
     return PersistentTabView(

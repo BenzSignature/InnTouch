@@ -12,18 +12,21 @@ class UserModel {
     required this.id,
     required this.name,
     required this.email,
+    required this.phone,
   });
 
   String? image;
   String id;
   String name;
   String email;
+  String phone;
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
     id: json["id"],
     name: json["name"],
     image: json["image"],
     email: json["email"],
+    phone: json["phone"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -31,6 +34,7 @@ class UserModel {
     "image": image,
     "name": name,
     "email": email,
+    "phone": phone,
   };
   factory UserModel.fromSnap(DocumentSnapshot snap) {
     var data = snap.data() as Map<String, dynamic>;
@@ -39,12 +43,14 @@ class UserModel {
       name: data['name'],
       email: data['email'],
       image: data['image'],
+      phone: data['phone'],
     );
   }
   UserModel copyWith({String? name, image}) => UserModel(
     id: id,
     name: name ?? this.name,
-    email: email,
+    email: email, 
+    phone: phone,
     image: image ?? this.image,
   );
 }

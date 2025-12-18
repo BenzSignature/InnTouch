@@ -9,11 +9,13 @@ class FirebaseDatabaseService {
     required String uid,
     required String name,
     required String email,
+    required String phone
   }) async {
     UserModel userModel = UserModel(
       id: uid,
       name: name,
       email: email,
+      phone: phone,
       image: null,
     );
     await _firestore.collection('users').doc(uid).set(userModel.toJson());
