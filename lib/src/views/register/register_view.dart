@@ -16,15 +16,15 @@ class RegisterView extends GetView<RegisterController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Register',
+                Text(
+                'Register'.tr,
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30),
               TextField(
                 controller: controller.nameController,
                 decoration: InputDecoration(
-                  hint: CustomText('Name'),
+                  hint: CustomText('Name'.tr),
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.person_outline),
                 ),
@@ -32,8 +32,8 @@ class RegisterView extends GetView<RegisterController> {
               const SizedBox(height: 15),
               TextField(
                 controller: controller.emailController,
-                decoration: const InputDecoration(
-                  hint: CustomText('Email'),
+                decoration: InputDecoration(
+                  hint: CustomText('Email'.tr),
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.email_outlined),
                 ),
@@ -42,8 +42,8 @@ class RegisterView extends GetView<RegisterController> {
               const SizedBox(height: 15),
               TextField(
                 controller: controller.phoneController,
-                decoration: const InputDecoration(
-                  hint: CustomText('Phone'),
+                decoration: InputDecoration(
+                  hint: CustomText('Phone'.tr),
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.phone),
                 ),
@@ -52,8 +52,8 @@ class RegisterView extends GetView<RegisterController> {
               const SizedBox(height: 15),
               TextField(
                 controller: controller.passwordController,
-                decoration: const InputDecoration(
-                  hint: CustomText('Password'),
+                decoration: InputDecoration(
+                  hint: CustomText('Password'.tr),
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.lock_outline),
                 ),
@@ -70,7 +70,7 @@ class RegisterView extends GetView<RegisterController> {
                 onPressed: () async {
                   controller.register();
                 },
-                child: const Text('Register'),
+                child: Text('Register'.tr),
               ),
             ],
           ),

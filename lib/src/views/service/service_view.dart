@@ -13,7 +13,7 @@ class ServiceView extends GetView<ServiceController> {
         appBar: AppBar(
         // leading: Icon(Icons.),
         centerTitle: true,
-        title: const CustomText('Service'),
+        title: CustomText('Service'.tr),
       ),
         body: SingleChildScrollView(
           child: Column(

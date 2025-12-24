@@ -13,7 +13,7 @@ class MyStaysView extends GetView<MyStaysController> {
         appBar: AppBar(
         // leading: Icon(Icons.),
         centerTitle: true,
-        title: const CustomText('My Stay'),
+        title: CustomText('My_Stay'.tr),
       ),
         body: SingleChildScrollView(
           child: Column(
