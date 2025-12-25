@@ -13,4 +13,5 @@ class AppIcons {
   static const myStays = FontAwesomeIcons.bed;
   static const service = FontAwesomeIcons.bellConcierge;
   static const setting = FontAwesomeIcons.gear;
+  static const arrowLeft = FontAwesomeIcons.angleLeft;
 }

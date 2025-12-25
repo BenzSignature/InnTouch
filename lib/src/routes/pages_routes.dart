@@ -45,5 +45,10 @@ class PagesRoutes {
       page: () => MyStaysView(),
       binding: MyStaysBinding(),
     ),
+    GetPage(
+      name: PathRoutes.changeLanguage,
+      page: () => ChangeLanguageView(),
+      binding: ChangeLanguageBinding(),
+    ),
   ];
 }

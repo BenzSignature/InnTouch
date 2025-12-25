@@ -7,3 +7,4 @@ export 'bottom_nav_bar/export_bottom_nav_bar_view.dart';
 export 'setting/export_setting_view.dart';
 export 'service/export_service_view.dart';
 export 'my_stays/export_my_stays_view.dart';
+export 'change_language/export_change_language_view.dart';
