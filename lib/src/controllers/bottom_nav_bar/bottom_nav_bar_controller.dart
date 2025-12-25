@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:inn_touch/src/config/app_icons.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/routes/export_routes.dart';
 
@@ -15,37 +16,37 @@ class BottomNavBarController extends GetxController {
   List<PersistentBottomNavBarItem> navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.home),
+        icon: FaIcon(AppIcons.home, size: 24),
         title: ("Home"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        activeColorPrimary: AppColors.accentGold,
+        inactiveColorPrimary: AppColors.textSecondary,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: PathRoutes.home,
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.hourglass),
+        icon: FaIcon(AppIcons.myStays),
         title: ("My Stay"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        activeColorPrimary: AppColors.accentGold,
+        inactiveColorPrimary: AppColors.textSecondary,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: PathRoutes.myStays,
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.smiley),
+        icon: FaIcon(AppIcons.service, size: 28),
         title: ("Service"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        activeColorPrimary: AppColors.accentGold,
+        inactiveColorPrimary: AppColors.textSecondary,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: PathRoutes.service,
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.settings),
+        icon: FaIcon(AppIcons.setting),
         title: ("Settings"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        activeColorPrimary: AppColors.accentGold,
+        inactiveColorPrimary: AppColors.textSecondary,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: PathRoutes.setting,
         ),
