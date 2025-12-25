@@ -9,4 +9,8 @@ class AppIcons {
   static const support = FontAwesomeIcons.headset;
   static const arrowRight = FontAwesomeIcons.angleRight;
   static const logOut = FontAwesomeIcons.rightFromBracket;
+  static const home = FontAwesomeIcons.house;
+  static const myStays = FontAwesomeIcons.bed;
+  static const service = FontAwesomeIcons.bellConcierge;
+  static const setting = FontAwesomeIcons.gear;
 }
