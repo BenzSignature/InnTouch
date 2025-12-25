@@ -1,6 +1,7 @@
 {
-  "Hello": "สวัสดี",
+  "Hello": "สวัสดีคุณ ",
   "Setting": "ตั้งค่า",
+  "Personal_Profile": "ข้อมูลส่วนตัว",
   "Edit_Profile": "แก้ไขข้อมูลส่วนตัว",
   "Change_Password": "เปลี่ยนรหัสผ่าน",
   "Notification": "การแจ้งเตือน",
@@ -17,5 +18,6 @@
   "Name": "ชื่อ - นามสกุล",
   "Phone": "เบอร์โทร",
   "Email": "อีเมล",
-  "Password": "รหัสผ่าน"
+  "Password": "รหัสผ่าน",
+  "Support": "ช่วยเหลือ"
 }
