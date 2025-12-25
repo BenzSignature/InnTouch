@@ -11,7 +11,7 @@ class SettingView extends GetView<SettingController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.accentGold,
-      appBar: CustomAppbar(name: 'Setting'.tr),
+      appBar: CustomAppbar(name: 'Setting'.tr, haveProfile: true),
       body: Column(
         children: [
           Expanded(
@@ -41,7 +41,9 @@ class SettingView extends GetView<SettingController> {
                       ),
                       CustomTextButton(
                         name: 'Language'.tr,
-                        onPressed: () {},
+                        onPressed: () {
+                          controller.goToChangeLanguage();
+                        },
                         icon: AppIcons.language,
                       ),
                       CustomTextButton(
