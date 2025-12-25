@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:inn_touch/src/config/app_icons.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/export_contollres.dart';
 import 'package:inn_touch/src/core/widgets/export_widget.dart';
@@ -8,138 +9,102 @@ class SettingView extends GetView<SettingController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-        // leading: Icon(Icons.),
-        centerTitle: true,
-        title:  CustomText('Setting'.tr),
-      ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+    return Scaffold(
+      backgroundColor: AppColors.accentGold,
+      appBar: CustomAppbar(name: 'Setting'.tr),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: AppColors.primaryDark,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 30),
+                      CustomTextButton(
+                        name: 'Personal_Profile'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.profile,
+                      ),
+                      CustomTextButton(
+                        name: 'Language'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.language,
+                      ),
+                      CustomTextButton(
+                        name: 'Payment'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.payment,
+                      ),
+                      CustomTextButton(
+                        name: 'Change_Password'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.security,
+                      ),
+                      CustomTextButton(
+                        name: 'Notification'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.notifications,
+                      ),
+                      CustomTextButton(
+                        name: 'Support'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.support,
+                      ),
+                      SizedBox(height: 16),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              CustomText(
+                                'App-name: ',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                              CustomText(
+                                'InnTouch',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+                          Row(
+                            children: [
+                              CustomText(
+                                'Version: ',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                              CustomText(
+                                '0.0.1',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.edit_outlined, size: 20),
-                label: CustomText('Edit_Profile'.tr),
               ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.language, size: 20),
-                label: CustomText('Language'.tr),
-              ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.payment, size: 20),
-                label: CustomText('Payment'.tr),
-              ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.password, size: 20),
-                label: CustomText('Change_Password'.tr),
-              ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.notification_add, size: 20),
-                label: CustomText('Notification'.tr),
-              ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC5A367),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.centerLeft,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  // controller.profile();
-                },
-                icon: const Icon(Icons.help_center_outlined, size: 20),
-                label: CustomText('Help_Center'.tr),
-              ),
-              const SizedBox(height: 30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 205, 51, 4),
-                  foregroundColor: const Color(0xFF202020),
-                  minimumSize: const Size(double.infinity, 50),
-                  alignment: Alignment.center,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () async {
-                  controller.signOut();
-                },
-                icon: const Icon(Icons.logout, size: 20),
-                label: CustomText('Log_Out'.tr)
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
