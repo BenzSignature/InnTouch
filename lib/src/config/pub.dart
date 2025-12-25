@@ -8,3 +8,4 @@ export 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 export 'app_colors.dart';
 export 'app_fonts.dart';
 export '../extension/hex_color.dart';
+export 'package:font_awesome_flutter/font_awesome_flutter.dart';
