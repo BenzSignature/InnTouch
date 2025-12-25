@@ -7,6 +7,10 @@ import 'package:inn_touch/src/services/firebase/firebase_auth/export_firebase_au
 class SettingController extends GetxController {
   final AuthService _authService = AuthService();
 
+  void goToChangeLanguage() {
+    Get.toNamed(PathRoutes.changeLanguage);
+  }
+
   void signOut() {
     log('signOut');
     _authService.signOut();
