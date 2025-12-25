@@ -54,6 +54,7 @@ dependencies:
   flutter_keyboard_visibility: ^6.0.0
   persistent_bottom_nav_bar: ^6.2.1
   shared_preferences: ^2.5.3
+  font_awesome_flutter: ^10.9.1
   # flutter_stripe: ^12.0.2
   # easy_stepper: ^0.8.5+1
 
