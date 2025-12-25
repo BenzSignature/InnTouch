@@ -12,7 +12,7 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         // leading: Icon(Icons.),
         centerTitle: true,
-        title: const CustomText('Home Page'),
+        title: CustomText('Home_Page'.tr),
       ),
       body: Center(
         child: Obx(

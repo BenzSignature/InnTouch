@@ -15,12 +15,12 @@ class LoginView extends GetView<LoginController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(child: CustomText('Login')),
+              Center(child: CustomText('Log_In'.tr)),
               const SizedBox(height: 20),
               TextField(
                 controller: controller.emailController,
-                decoration: const InputDecoration(
-                  hint: CustomText('Email'),
+                decoration: InputDecoration(
+                  hint: CustomText('Email'.tr),
                   border: OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.emailAddress,
@@ -28,8 +28,8 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 10),
               TextField(
                 controller: controller.passwordController,
-                decoration: const InputDecoration(
-                  hint: CustomText('Password'),
+                decoration: InputDecoration(
+                  hint: CustomText('Password'.tr),
                   border: OutlineInputBorder(),
                 ),
                 obscureText: true,
@@ -39,7 +39,7 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () async {
                   controller.login();
                 },
-                name: 'Login',
+                name: 'Log_In'.tr,
               ),
               const SizedBox(height: 20),
               Row(
@@ -61,7 +61,7 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () {
                   controller.signInAsGuest();
                 },
-                child: const CustomText('Continue as Guest'),
+                child: CustomText('Continue_as_Guest'.tr),
               ),
             ],
           ),
