@@ -7,4 +7,7 @@ abstract class PathRoutes {
   static const bottomNavBar = '/bottom_nav_bar';
   static const myStays = '/my_stays';
   static const service = '/service';
+  static const changeLanguage = '/change_language';
+  static const personalProfile = '/personal_profile';
+  static const payment = '/payment';
 }

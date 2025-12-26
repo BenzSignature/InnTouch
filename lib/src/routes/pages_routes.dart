@@ -45,5 +45,20 @@ class PagesRoutes {
       page: () => MyStaysView(),
       binding: MyStaysBinding(),
     ),
+    GetPage(
+      name: PathRoutes.changeLanguage,
+      page: () => ChangeLanguageView(),
+      binding: ChangeLanguageBinding(),
+    ),
+    GetPage(
+      name: PathRoutes.personalProfile,
+      page: () => PersonalProfileView(),
+      binding: PersonalProfileBinding(),
+    ),
+    GetPage(
+      name: PathRoutes.payment,
+      page: () => PaymentView(),
+      binding: PaymentBinding(),
+    ),
   ];
 }
