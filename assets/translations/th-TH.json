@@ -1,3 +1,24 @@
 {
-  "Hello": "สวัสดี"
+  "Hello": "สวัสดีคุณ ",
+  "Setting": "ตั้งค่า",
+  "Personal_Profile": "ข้อมูลส่วนตัว",
+  "Edit_Profile": "แก้ไขข้อมูลส่วนตัว",
+  "Change_Password": "เปลี่ยนรหัสผ่าน",
+  "Notification": "การแจ้งเตือน",
+  "Language": "ภาษา",
+  "Help_Center": "ศูนย์ช่วยเหลือ",
+  "Log_Out": "ออกจากระบบ",
+  "Log_In": "เข้าสู่ระบบ",
+  "Service": "บริการ",
+  "My_Stay": "การจองห้องพักของฉัน",
+  "Home_Page": "หน้าหลัก",
+  "Payment": "การชำระเงิน",
+  "Continue_as_guest": "ใช้งานโดยไม่เข้าสู่ระบบ",
+  "Register": "สร้างบัญชีผู้ใช้",
+  "Name": "ชื่อ - นามสกุล",
+  "Phone": "เบอร์โทร",
+  "Email": "อีเมล",
+  "Password": "รหัสผ่าน",
+  "Support": "ช่วยเหลือ",
+  "Select_Language": "เลือกภาษา"
 }

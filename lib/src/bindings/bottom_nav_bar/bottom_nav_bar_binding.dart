@@ -6,5 +6,6 @@ class BottomNavBarBinding extends Bindings {
   void dependencies() {
     Get.lazyPut(() => BottomNavBarController());
     Get.lazyPut(() => HomeController());
+    Get.lazyPut(() => SettingController());
   }
 }

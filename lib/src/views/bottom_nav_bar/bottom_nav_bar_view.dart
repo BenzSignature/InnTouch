@@ -9,7 +9,7 @@ class BottomNavBar extends GetView<BottomNavBarController> {
   @override
   Widget build(BuildContext context) {
     List<Widget> buildScreens() {
-      return [HomeView(), SettingView()];
+      return [HomeView(), MyStaysView(), ServiceView(), SettingView()];
     }
 
     return PersistentTabView(
@@ -22,7 +22,8 @@ class BottomNavBar extends GetView<BottomNavBarController> {
       stateManagement: true,
       hideNavigationBarWhenKeyboardAppears: true,
       padding: const EdgeInsets.only(top: 8),
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: AppColors.secondaryGray,
+      navBarStyle: NavBarStyle.simple,
       isVisible: true,
       animationSettings: const NavBarAnimationSettings(
         navBarItemAnimation: ItemAnimationSettings(
@@ -31,8 +32,8 @@ class BottomNavBar extends GetView<BottomNavBarController> {
         ),
         screenTransitionAnimation: ScreenTransitionAnimationSettings(
           animateTabTransition: true,
-          duration: Duration(milliseconds: 200),
-          screenTransitionAnimationType: ScreenTransitionAnimationType.fadeIn,
+          duration: Duration(milliseconds: 300),
+          curve: Curves.easeIn,
         ),
       ),
       confineToSafeArea: true,

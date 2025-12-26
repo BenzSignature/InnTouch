@@ -6,6 +6,7 @@ import 'package:inn_touch/src/services/export_services.dart';
 class RegisterController extends GetxController {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
+  final phoneController = TextEditingController();
   final passwordController = TextEditingController();
   final AuthService _authService = AuthService();
 
@@ -13,6 +14,7 @@ class RegisterController extends GetxController {
   void dispose() {
     nameController.dispose();
     emailController.dispose();
+    phoneController.dispose();
     passwordController.dispose();
     super.dispose();
   }
@@ -20,8 +22,9 @@ class RegisterController extends GetxController {
   void register() async {
     String name = nameController.text.trim();
     String email = emailController.text.trim();
+    String phone = phoneController.text.trim();
     String password = passwordController.text.trim();
-    bool isRegisterSuccess = await _authService.signUp(name, email, password);
+    bool isRegisterSuccess = await _authService.signUp(name, email, password, phone,);
     if (isRegisterSuccess) {
       Get.offAllNamed(PathRoutes.bottomNavBar);
     } else {

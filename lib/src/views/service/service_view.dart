@@ -10,13 +10,14 @@ class ServiceView extends GetView<ServiceController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+        // leading: Icon(Icons.),
+        centerTitle: true,
+        title: CustomText('Service'.tr),
+      ),
         body: SingleChildScrollView(
           child: Column(
-            children: [
-              Center(
-                child: CustomText('Service View'),
-              )
-            ],
+            children: [],
           ),
         ),
       ),

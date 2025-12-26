@@ -1,23 +1,29 @@
 import 'package:get/get.dart';
+import 'package:inn_touch/src/config/app_icons.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/export_contollres.dart';
+import 'package:inn_touch/src/core/widgets/export_widget.dart';
 
 class SettingView extends GetView<SettingController> {
   const SettingView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.logout),
-                tooltip: 'Sign Out',
-                onPressed: () {
-                  controller.signOut();
-                },
+    return Scaffold(
+      backgroundColor: AppColors.accentGold,
+      appBar: CustomAppbar(name: 'Setting'.tr, haveProfile: true),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: AppColors.primaryDark,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
               ),
               child: ClipRRect(
                 borderRadius: const BorderRadius.only(
@@ -104,7 +110,7 @@ class SettingView extends GetView<SettingController> {
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
