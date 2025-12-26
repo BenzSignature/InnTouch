@@ -11,6 +11,14 @@ class SettingController extends GetxController {
     Get.toNamed(PathRoutes.changeLanguage);
   }
 
+  void goToPayment() {
+    Get.toNamed(PathRoutes.payment);
+  }
+
+  void goToPersonalProfile() {
+    Get.toNamed(PathRoutes.personalProfile);
+  }
+
   void signOut() {
     log('signOut');
     _authService.signOut();
