@@ -7,3 +7,5 @@ export 'bottom_nav_bar/export_bottom_nav_bar_binding.dart';
 export 'my_stays/export_my_stay_binding.dart';
 export 'service/export_service_binding.dart';
 export 'change_language/export_change_language_binding.dart';
+export 'personal_profile/export_personal_profile_binding.dart';
+export 'payment/export_payment_binding.dart';

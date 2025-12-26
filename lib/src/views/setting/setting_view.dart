@@ -36,7 +36,9 @@ class SettingView extends GetView<SettingController> {
                       const SizedBox(height: 30),
                       CustomTextButton(
                         name: 'Personal_Profile'.tr,
-                        onPressed: () {},
+                        onPressed: () {
+                          controller.goToPersonalProfile();
+                        },
                         icon: AppIcons.profile,
                       ),
                       CustomTextButton(
@@ -48,7 +50,9 @@ class SettingView extends GetView<SettingController> {
                       ),
                       CustomTextButton(
                         name: 'Payment'.tr,
-                        onPressed: () {},
+                        onPressed: () {
+                          controller.goToPayment();
+                        },
                         icon: AppIcons.payment,
                       ),
                       CustomTextButton(
