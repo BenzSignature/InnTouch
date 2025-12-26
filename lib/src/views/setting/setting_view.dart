@@ -19,7 +19,90 @@ class SettingView extends GetView<SettingController> {
                   controller.signOut();
                 },
               ),
-            ],
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 30),
+                      CustomTextButton(
+                        name: 'Personal_Profile'.tr,
+                        onPressed: () {
+                          controller.goToPersonalProfile();
+                        },
+                        icon: AppIcons.profile,
+                      ),
+                      CustomTextButton(
+                        name: 'Language'.tr,
+                        onPressed: () {
+                          controller.goToChangeLanguage();
+                        },
+                        icon: AppIcons.language,
+                      ),
+                      CustomTextButton(
+                        name: 'Payment'.tr,
+                        onPressed: () {
+                          controller.goToPayment();
+                        },
+                        icon: AppIcons.payment,
+                      ),
+                      CustomTextButton(
+                        name: 'Change_Password'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.security,
+                      ),
+                      CustomTextButton(
+                        name: 'Notification'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.notifications,
+                      ),
+                      CustomTextButton(
+                        name: 'Support'.tr,
+                        onPressed: () {},
+                        icon: AppIcons.support,
+                      ),
+                      SizedBox(height: 16),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              CustomText(
+                                'App-name: ',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                              CustomText(
+                                'InnTouch',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+                          Row(
+                            children: [
+                              CustomText(
+                                'Version: ',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                              CustomText(
+                                '0.0.1',
+                                fontSize: 12,
+                                color: AppColors.textSecondary,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
       ),

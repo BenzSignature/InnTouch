@@ -7,3 +7,6 @@ export 'setting/export_setting_controller.dart';
 export 'bottom_nav_bar/export_bottom_nav_bar_controller.dart';
 export 'my_stays/export_my_stays_controller.dart';
 export 'service/export_service_controller.dart';
+export 'change_language/export_change_language_controller.dart';
+export 'personal_profile/export_personal_profile_controller.dart';
+export 'payment/export_payment_controller.dart';
