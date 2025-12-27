@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
               fontWeight: FontWeight.bold,
             );
           } else {
-            return CustomText('Hello'.tr);
+            return CustomText('Hello Motherfucker'.tr);
           }
         }),
       ),
