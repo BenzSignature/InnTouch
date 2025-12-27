@@ -9,27 +9,21 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // leading: Icon(Icons.),
-        centerTitle: true,
-        title: CustomText('Home_Page'.tr),
-      ),
+      appBar: AppBar(centerTitle: true, title: CustomText('Home_Page'.tr)),
       body: Center(
-        child: Obx(
-          () {
-            if (controller.isLoading.value) {
-              return const CircularProgressIndicator();
-            } else if (controller.user.value != null) {
-              return CustomText(
-                'Hello, ${controller.user.value!.name}!'.tr,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              );
-            } else {
-              return CustomText('Hello'.tr);
-            }
-          },
-        ),
+        child: Obx(() {
+          if (controller.isLoading.value) {
+            return const CircularProgressIndicator();
+          } else if (controller.user.value != null) {
+            return CustomText(
+              'Hello, ${controller.user.value!.name}!'.tr,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            );
+          } else {
+            return CustomText('Hello'.tr);
+          }
+        }),
       ),
     );
   }
