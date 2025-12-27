@@ -12,6 +12,18 @@ class HomeController extends GetxController {
   final Rx<UserModel?> user = Rx<UserModel?>(null);
   final RxBool isLoading = true.obs;
 
+  final List<String> imgList = [
+    'assets/images/image_banner_1.png',
+    'assets/images/image_banner_2.png',
+    'assets/images/image_banner_3.png',
+    'assets/images/image_banner_4.png',
+    'assets/images/image_banner_5.png',
+    'assets/images/image_banner_6.png',
+    'assets/images/image_banner_7.png',
+  ];
+
+  var currentBannerIndex = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
