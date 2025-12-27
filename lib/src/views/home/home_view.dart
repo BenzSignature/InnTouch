@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:inn_touch/src/config/app_icons.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/home/export_home_controller.dart';
 import 'package:inn_touch/src/core/widgets/export_widget.dart';
@@ -9,21 +10,36 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: CustomText('Home_Page'.tr)),
-      body: Center(
-        child: Obx(() {
-          if (controller.isLoading.value) {
-            return const CircularProgressIndicator();
-          } else if (controller.user.value != null) {
-            return CustomText(
-              'Hello, ${controller.user.value!.name}!'.tr,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            );
-          } else {
-            return CustomText('Hello Motherfucker'.tr);
-          }
-        }),
+      backgroundColor: AppColors.primaryDark,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Obx(
+                () => CustomTopBar(
+                  userName: controller.user.value?.name,
+                  onTapNotification: () {
+                    print("Open Notifications");
+                    // Get.toNamed(Routes.notification);
+                  },
+                ),
+              ),
+              CustomImageBanner(
+                imgList: controller.imgList,
+                currentIndex: controller.currentBannerIndex,
+                onTapButton: () {
+                  print("Go to booking page!");
+                  // Get.toNamed(Routes.booking);
+                },
+              ),
+              const SizedBox(height: 10),
+              const CustomMenuGrid(),
+              const CustomSpecialOffers(),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -9,3 +9,4 @@ export 'app_colors.dart';
 export 'app_fonts.dart';
 export '../extension/hex_color.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
+export 'package:carousel_slider/carousel_slider.dart';
