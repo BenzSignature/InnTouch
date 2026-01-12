@@ -10,3 +10,8 @@ export 'custom_menu_icon/export_custom_menu_icon.dart';
 export 'custom_menu_grid/export_custom_menu_grid.dart';
 export 'custom_special_offer/export_custom_special_offer.dart';
 export 'custom_offer_card/export_custom_offer_card.dart';
+export 'custom_current_stay_card/export_custom_current_stay_card.dart';
+export 'custom_date/export_custom_date.dart';
+export 'custom_info_item/export_custom_info_item.dart';
+export 'custom_previous_stays/export_custom_previous_stays.dart';
+export 'custom_guest_services/export_custom_guest_services.dart';
