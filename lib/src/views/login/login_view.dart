@@ -32,14 +32,14 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 20),
               CustomTextField(
                 controller: controller.emailController,
-                hintText: 'Email',
+                hintText: 'Email'.tr,
                 keyboardType: TextInputType.emailAddress,
                 prefixIcon: Icons.email_outlined,
               ),
               const SizedBox(height: 10),
               CustomTextField(
                 controller: controller.passwordController,
-                hintText: 'Password',
+                hintText: 'Password'.tr,
                 obscureText: true,
                 prefixIcon: Icons.lock_outline,
               ),
@@ -54,19 +54,20 @@ class LoginView extends GetView<LoginController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const CustomText("ยังไม่มีบัญชี?"),
+                  CustomText("You_don't_have_an_account".tr),
                   TextButton(
                     onPressed: () {
                       controller.goToRegister();
                     },
-                    child: const CustomText(
-                      'สมัครสมาชิกที่นี่',
+                    child: CustomText(
+                      'Register_here'.tr,
                       fontWeight: FontWeight.bold,
                       color: AppColors.accentGold,
                     ),
                   ),
                 ],
               ),
+              const SizedBox(height: 12),
               TextButton(
                 onPressed: () {
                   controller.signInAsGuest();
