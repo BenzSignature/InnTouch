@@ -49,6 +49,6 @@ class LoginController extends GetxController {
   }
 
   void goToRegister() {
-    Get.toNamed(PathRoutes.register);
+    Get.offAllNamed(PathRoutes.register);
   }
 }
