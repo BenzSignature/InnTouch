@@ -36,6 +36,7 @@ class SettingView extends GetView<SettingController> {
                       const SizedBox(height: 30),
                       CustomTextButton(
                         name: 'Personal_Profile'.tr,
+                        iconArrowRight: true,
                         onPressed: () {
                           controller.goToPersonalProfile();
                         },
@@ -43,6 +44,7 @@ class SettingView extends GetView<SettingController> {
                       ),
                       CustomTextButton(
                         name: 'Language'.tr,
+                        iconArrowRight: true,
                         onPressed: () {
                           controller.goToChangeLanguage();
                         },
@@ -50,6 +52,7 @@ class SettingView extends GetView<SettingController> {
                       ),
                       CustomTextButton(
                         name: 'Payment'.tr,
+                        iconArrowRight: true,
                         onPressed: () {
                           controller.goToPayment();
                         },
@@ -57,18 +60,29 @@ class SettingView extends GetView<SettingController> {
                       ),
                       CustomTextButton(
                         name: 'Change_Password'.tr,
+                        iconArrowRight: true,
                         onPressed: () {},
                         icon: AppIcons.security,
                       ),
                       CustomTextButton(
                         name: 'Notification'.tr,
+                        iconArrowRight: true,
                         onPressed: () {},
                         icon: AppIcons.notifications,
                       ),
                       CustomTextButton(
                         name: 'Support'.tr,
+                        iconArrowRight: true,
                         onPressed: () {},
                         icon: AppIcons.support,
+                      ),
+                      CustomTextButton(
+                        name: 'Log_Out'.tr,
+                        iconArrowRight: false,
+                        onPressed: () {
+                          controller.signOut();
+                        },
+                        icon: AppIcons.logOut,
                       ),
                       SizedBox(height: 16),
                       Column(
@@ -102,6 +116,7 @@ class SettingView extends GetView<SettingController> {
                               ),
                             ],
                           ),
+                          SizedBox(height: 24),
                         ],
                       ),
                     ],
