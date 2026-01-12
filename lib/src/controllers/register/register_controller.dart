@@ -24,7 +24,12 @@ class RegisterController extends GetxController {
     String email = emailController.text.trim();
     String phone = phoneController.text.trim();
     String password = passwordController.text.trim();
-    bool isRegisterSuccess = await _authService.signUp(name, email, password, phone,);
+    bool isRegisterSuccess = await _authService.signUp(
+      name,
+      email,
+      password,
+      phone,
+    );
     if (isRegisterSuccess) {
       Get.offAllNamed(PathRoutes.bottomNavBar);
     } else {
@@ -36,5 +41,9 @@ class RegisterController extends GetxController {
         colorText: Colors.white,
       );
     }
+  }
+
+  void goToLogin() {
+    Get.offAllNamed(PathRoutes.login);
   }
 }
