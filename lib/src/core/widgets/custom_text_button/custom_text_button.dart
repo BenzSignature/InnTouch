@@ -8,6 +8,7 @@ class CustomTextButton extends StatelessWidget {
   final String name;
   final IconData icon;
   final double? sizeIcon;
+  final bool iconArrowRight;
 
   const CustomTextButton({
     super.key,
@@ -15,6 +16,7 @@ class CustomTextButton extends StatelessWidget {
     required this.name,
     required this.icon,
     this.sizeIcon,
+    required this.iconArrowRight,
   });
 
   @override
@@ -43,15 +45,17 @@ class CustomTextButton extends StatelessWidget {
                   CustomText(name, fontWeight: FontWeight.bold),
                 ],
               ),
-              Row(
-                children: [
-                  Icon(
-                    AppIcons.arrowRight,
-                    size: 26,
-                    color: AppColors.accentGold,
-                  ),
-                ],
-              ),
+              iconArrowRight
+                  ? Row(
+                      children: [
+                        Icon(
+                          AppIcons.arrowRight,
+                          size: 26,
+                          color: AppColors.accentGold,
+                        ),
+                      ],
+                    )
+                  : SizedBox.shrink(),
             ],
           ),
         ),
