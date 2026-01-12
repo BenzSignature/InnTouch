@@ -6,7 +6,7 @@ import 'package:inn_touch/src/core/widgets/export_widget.dart';
 class CustomTextButton extends StatelessWidget {
   final void Function() onPressed;
   final String name;
-  final IconData icon;
+  final IconData? icon;
   final double? sizeIcon;
   final bool iconArrowRight;
 
@@ -14,7 +14,7 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.name,
-    required this.icon,
+    this.icon,
     this.sizeIcon,
     required this.iconArrowRight,
   });

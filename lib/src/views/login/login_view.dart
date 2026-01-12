@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:inn_touch/src/config/export_config.dart';
 import 'package:inn_touch/src/controllers/export_contollres.dart';
+import 'package:inn_touch/src/core/utils/media_queery.dart';
 import 'package:inn_touch/src/core/widgets/export_widget.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -10,27 +11,63 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return KeyboardDismissOnTap(
       child: Scaffold(
+        backgroundColor: AppColors.primaryDark,
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.only(
+            left: 20,
+            right: 20,
+            bottom: 20,
+            top: ScreenUtil.screenHeight(context) / 8,
+          ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Image.asset(
+                'assets/images/logo_inntouch.png',
+                fit: BoxFit.cover,
+                scale: 3.5,
+              ),
+              const SizedBox(height: 12),
               Center(child: CustomText('Log_In'.tr)),
               const SizedBox(height: 20),
               TextField(
                 controller: controller.emailController,
+                cursorColor: AppColors.accentGold,
+                style: TextStyle(color: AppColors.textPrimary),
                 decoration: InputDecoration(
-                  hint: CustomText('Email'.tr),
+                  hintText: 'Email'.tr,
+                  hintStyle: TextStyle(color: AppColors.textSecondary),
                   border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.textSecondary),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: AppColors.accentGold,
+                      width: 1.5,
+                    ),
+                  ),
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: controller.passwordController,
+                cursorColor: AppColors.accentGold,
+                style: TextStyle(color: AppColors.textPrimary),
                 decoration: InputDecoration(
-                  hint: CustomText('Password'.tr),
+                  hintText: 'Password'.tr,
+                  hintStyle: TextStyle(color: AppColors.textSecondary),
                   border: OutlineInputBorder(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.textSecondary),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: AppColors.accentGold,
+                      width: 1.5,
+                    ),
+                  ),
                 ),
                 obscureText: true,
               ),
@@ -53,6 +90,7 @@ class LoginView extends GetView<LoginController> {
                     child: const CustomText(
                       'สมัครสมาชิกที่นี่',
                       fontWeight: FontWeight.bold,
+                      color: AppColors.accentGold,
                     ),
                   ),
                 ],
@@ -61,7 +99,7 @@ class LoginView extends GetView<LoginController> {
                 onPressed: () {
                   controller.signInAsGuest();
                 },
-                child: CustomText('Continue_as_Guest'.tr),
+                child: CustomText('Continue_as_guest'.tr),
               ),
             ],
           ),
