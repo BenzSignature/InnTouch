@@ -20,5 +20,9 @@
   "Email": "อีเมล",
   "Password": "รหัสผ่าน",
   "Support": "ช่วยเหลือ",
-  "Select_Language": "เลือกภาษา"
+  "Select_Language": "เลือกภาษา",
+  "Register_here": "สมัครสมาชิกที่นี่",
+  "You_don't_have_an_account": "ยังไม่มีบัญชี?",
+  "Log_in_here": "เข้าสู่ระบบที่นี่",
+  "You_Already_have_an_account": "มีบัญชีอยู่แล้ว?"
 }

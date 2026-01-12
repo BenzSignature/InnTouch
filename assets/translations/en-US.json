@@ -20,5 +20,9 @@
   "Email": "Email",
   "Password": "Password",
   "Support": "Support",
-  "Select_Language": "Select Language"
+  "Select_Language": "Select Language",
+  "Register_here": "Register Here",
+  "You_don't_have_an_account": "You don't have an account?",
+  "Log_in_here": "Login Here",
+  "You_Already_have_an_account": "You Already have an account?"
 }
