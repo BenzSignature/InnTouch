@@ -15,3 +15,4 @@ export 'custom_date/export_custom_date.dart';
 export 'custom_info_item/export_custom_info_item.dart';
 export 'custom_previous_stays/export_custom_previous_stays.dart';
 export 'custom_guest_services/export_custom_guest_services.dart';
+export 'custom_text_field/export_custom_text_field.dart';
