@@ -30,46 +30,18 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 12),
               Center(child: CustomText('Log_In'.tr)),
               const SizedBox(height: 20),
-              TextField(
+              CustomTextField(
                 controller: controller.emailController,
-                cursorColor: AppColors.accentGold,
-                style: TextStyle(color: AppColors.textPrimary),
-                decoration: InputDecoration(
-                  hintText: 'Email'.tr,
-                  hintStyle: TextStyle(color: AppColors.textSecondary),
-                  border: OutlineInputBorder(),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.textSecondary),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: AppColors.accentGold,
-                      width: 1.5,
-                    ),
-                  ),
-                ),
+                hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
+                prefixIcon: Icons.email_outlined,
               ),
               const SizedBox(height: 10),
-              TextField(
+              CustomTextField(
                 controller: controller.passwordController,
-                cursorColor: AppColors.accentGold,
-                style: TextStyle(color: AppColors.textPrimary),
-                decoration: InputDecoration(
-                  hintText: 'Password'.tr,
-                  hintStyle: TextStyle(color: AppColors.textSecondary),
-                  border: OutlineInputBorder(),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.textSecondary),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: AppColors.accentGold,
-                      width: 1.5,
-                    ),
-                  ),
-                ),
+                hintText: 'Password',
                 obscureText: true,
+                prefixIcon: Icons.lock_outline,
               ),
               const SizedBox(height: 30),
               CustomButton(
