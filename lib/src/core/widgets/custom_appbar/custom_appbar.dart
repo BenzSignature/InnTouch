@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 import 'package:inn_touch/src/config/app_icons.dart';
 import 'package:inn_touch/src/config/export_config.dart';
+import 'package:inn_touch/src/controllers/home/home_controller.dart';
 import 'package:inn_touch/src/core/widgets/export_widget.dart';
 
-class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppbar extends GetView<HomeController> implements PreferredSizeWidget {
   final String name;
   final bool haveProfile;
   final VoidCallback? onTap;
@@ -65,22 +66,23 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
+                        Obx(() => Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             CustomText(
-                              "Wellcome".tr,
+                              "Welcome".tr,
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                             CustomText(
-                              "ดอมินิค คอนเน็ตโต้",
+                              controller.user.value?.name ?? "Guest".tr,
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ],
+                        ),
                         ),
                         const SizedBox(height: 4),
                         CustomText(
